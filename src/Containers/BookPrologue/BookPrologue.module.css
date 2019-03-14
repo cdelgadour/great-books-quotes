@@ -14,12 +14,15 @@
     text-align: justify;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .BookPrologue {
         box-sizing: border-box;
         width: 800px;
         margin: auto;
+        border-style: solid;
+        border-width: 0.2px;
     }
 }
+
 
 

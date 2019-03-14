@@ -16,3 +16,12 @@ button:hover {
 button:active {
     background-color: #D9CB9E;
 }
+
+@media (min-width: 801px) {
+    .Button {
+        box-sizing: border-box;
+        width: 40%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}
