@@ -19,8 +19,8 @@
     color: white;
 }
 
-@media (min-width: 800px) {
-    .BookInfo p {
+@media (min-width: 650px) {
+    .BookInfo {
         margin: 0;
         font-size: 2em;
         text-align: center;

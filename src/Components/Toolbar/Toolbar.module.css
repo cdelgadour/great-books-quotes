@@ -12,4 +12,16 @@
     font-size: 1.7em;
 }
 
+@media (min-width: 650px) and (max-width: 800px) {
+    .Toolbar {
+        background-color: #DC3522;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
 
+    .Toolbar h1 {
+        font-size: 2.5em;
+    }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import Aux from '../../hoc/Aux/Aux'
+import Aux from '../../hoc/Aux/Aux';
+import classes from './FullText.module.css'
 
 const FullText = (props) => {
     return (<Aux>
-        <p style={{marginTop: '1em', fontSize: '1.2em'}}>{props.text}</p>
+        <p className={classes.FullText}>{props.text}</p>
     </Aux>)
 };
 

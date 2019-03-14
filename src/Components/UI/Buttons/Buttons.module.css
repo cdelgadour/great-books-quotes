@@ -6,4 +6,16 @@
     bottom: 0;
 }
 
+@media (min-width: 650px) and (max-width: 800px) {
+    .Buttons {
+        height: 50%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Buttons button {
+        font-size: 1.7em;
+    }
+}
+
 
