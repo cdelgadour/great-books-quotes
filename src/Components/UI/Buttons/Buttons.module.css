@@ -1,4 +1,9 @@
 .Buttons {
-    text-align: center;
-    box-shadow: 1px 1px 1px violet;
+    background-color: #D9CB9E;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
 }
+
+

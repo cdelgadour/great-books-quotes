@@ -30,11 +30,7 @@ let books = [
     {
         author: 'Fiodor Dostoevsky',
         text: 'I am a sick man... I am a spiteful man. I am an unpleasant man. I think my liver is diseased. However, I don\'t know beans ' +
-            'about my disease, and I am not sure what is bothering me. I don\'t treat it and never have, though I respect medicine and doctors. ' +
-            'Besides, I am extremely superstitious, let\'s say sufficiently so to respect medicine. (I am educated enough not to be superstitious, but I am.) ' +
-            'No, I refuse to treat it out of spite. You probably will not understand that. Well, but I understand it. Of course I can\'t explain to you just whom I' +
-            ' am annoying in this case by my spite. I am perfectly well aware that I cannot "get even" with the doctors by not consulting them. I know better than anyone that I thereby injure only myself and no one else. ' +
-            'But still, if I don\'t treat it, its is out of spite. My liver is bad, well then-- let it get even worse!',
+            'about my disease, and I am not sure what is bothering me. I don\'t treat it and never have, though I respect medicine and doctors.',
         bookTitle: 'Notes from the Underground'
     },
     {
@@ -64,10 +60,25 @@ let books = [
 
 class App extends Component {
     getTurnData = () => {
+        let booksArray = [];
+        let bookInfo;
+        for (let book of books) {
+            booksArray.push(book.bookTitle);
+        }
+        booksArray = shuffle(booksArray).splice(0, 4);
+        let correct = booksArray[Math.floor(Math.random() * booksArray.length)];
+        books.forEach(book => {
+                if (book.bookTitle === correct) bookInfo = {...book};
+            }
+        );
 
+        return {
+            bookInfo: {...bookInfo},
+            bookList: booksArray
+        }
     };
   render() {
-      let booksArray = [];
+      /*let booksArray = [];
       let bookInfo;
       for (let book of books) {
           booksArray.push(book.bookTitle);
@@ -77,11 +88,11 @@ class App extends Component {
       books.forEach(book => {
           if (book.bookTitle === correct) bookInfo = {...book};
           }
-      );
+      );*/
 
     return (
       <div className="App">
-          <BookPrologue  correct={bookInfo} bookList={booksArray}/>
+          <BookPrologue  turnData={this.getTurnData}/>
       </div>
     );
   }

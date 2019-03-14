@@ -1,0 +1,28 @@
+.BookInfo {
+    margin: 0;
+    text-align: center;
+}
+
+.BookInfo button {
+    width: 100%;
+    border-width: 1px 5px;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0.5em;
+}
+
+.BookInfo button:hover {
+    font-size: 1em;
+    font-weight: bolder;
+    background-color: #DC3522;
+    color: white;
+}
+
+@media (min-width: 800px) {
+    .BookInfo p {
+        margin: 0;
+        font-size: 2em;
+        text-align: center;
+    }
+}

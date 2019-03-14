@@ -5,9 +5,9 @@ const Toolbar = props => {
     return (
         <header className={classes.Toolbar}>
             <h1>Great Books' Prologues</h1>
-            <nav>
+           {/* <nav>
                 <a href="/">Add a prologue!</a>
-            </nav>
+            </nav>*/}
         </header>);
 };
 

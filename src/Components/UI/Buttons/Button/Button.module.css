@@ -1,0 +1,18 @@
+.Button {
+    width: 100%;
+    border-width: 1px 5px;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0.5em;
+}
+
+button:hover {
+    font-weight: bolder;
+    background-color: #DC3522;
+    color: white;
+}
+
+button:active {
+    background-color: red;
+}

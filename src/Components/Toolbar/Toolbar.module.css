@@ -1,6 +1,15 @@
 .Toolbar {
-    background-color: blue;
+    background-color: #DC3522;
     width: 100%;
     text-align: center;
     margin: 0;
+    color: white;
 }
+
+.Toolbar h1 {
+    margin: 0;
+    padding: 0.2em;
+    font-size: 1.7em;
+}
+
+
