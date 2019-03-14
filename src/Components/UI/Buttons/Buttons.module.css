@@ -18,4 +18,14 @@
     }
 }
 
+@media (min-width: 801px) {
+    .Buttons {
+        position: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 

@@ -1,0 +1,20 @@
+.Sidedrawer {
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    z-index: 200;
+    position: fixed;
+    transition: transform 0.3s;
+}
+
+.Sidedrawer a {
+    padding: 1em;
+}
+
+.Side
+
+@media (min-width: 500px) {
+    .Sidedrawer {
+        display: none;
+    }
+}

@@ -2,7 +2,7 @@
     width: 100%;
     border-width: 1px 5px;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: bold;
     margin: 0.5em;
 }
@@ -15,4 +15,13 @@ button:hover {
 
 button:active {
     background-color: #D9CB9E;
+}
+
+@media (min-width: 801px) {
+    .Button {
+        box-sizing: border-box;
+        width: 40%;
+        margin: 10px;
+        border-radius: 10px;
+    }
 }

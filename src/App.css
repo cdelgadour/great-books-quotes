@@ -1,8 +1,6 @@
-/*
-@media (min-width: 850px) {
-    body {
-        width: 850px;
+@media (min-width: 801px) {
+    .App {
+        max-width: 800px;
         margin: auto;
     }
 }
-*/

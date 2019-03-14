@@ -5,7 +5,6 @@ import './App.css';
 const shuffle = (arr) => {
     var currentIndex = arr.length, temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
         // Pick a remaining element...
@@ -28,7 +27,7 @@ let books = [
         bookTitle: 'A Tale of Two Cities'
     },
     {
-        author: 'Fiodor Dostoevsky',
+        author: 'Fyodor Dostoevsky',
         text: 'I am a sick man... I am a spiteful man. I am an unpleasant man. I think my liver is diseased. However, I don\'t know beans ' +
             'about my disease, and I am not sure what is bothering me. I don\'t treat it and never have, though I respect medicine and doctors.',
         bookTitle: 'Notes from the Underground'
@@ -78,18 +77,6 @@ class App extends Component {
         }
     };
   render() {
-      /*let booksArray = [];
-      let bookInfo;
-      for (let book of books) {
-          booksArray.push(book.bookTitle);
-      }
-      booksArray = shuffle(booksArray).splice(0, 4);
-      let correct = booksArray[Math.floor(Math.random() * booksArray.length)];
-      books.forEach(book => {
-          if (book.bookTitle === correct) bookInfo = {...book};
-          }
-      );*/
-
     return (
       <div className="App">
           <BookPrologue  turnData={this.getTurnData}/>
