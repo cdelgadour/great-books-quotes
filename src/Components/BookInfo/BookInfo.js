@@ -1,5 +1,4 @@
 import React from 'react';
-import Aux from '../../hoc/Aux/Aux'
 import classes from './BookInfo.module.css'
 
 const BookInfo = (props) => {
@@ -16,9 +15,9 @@ const BookInfo = (props) => {
                             fontSize: '1.7em',
                             textAlign: 'center'}}>Wrong answer!</h3>);
     }
-  return(<Aux>
+  return(<div>
       {bookInfo}
-  </Aux>)
+  </div>)
 };
 
 export default BookInfo;

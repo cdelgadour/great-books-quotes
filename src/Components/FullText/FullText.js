@@ -1,11 +1,10 @@
 import React from 'react';
-import Aux from '../../hoc/Aux/Aux';
 import classes from './FullText.module.css'
 
 const FullText = (props) => {
-    return (<Aux>
+    return (<div>
         <p className={classes.FullText}>{props.text}</p>
-    </Aux>)
+    </div>)
 };
 
 export default FullText;
