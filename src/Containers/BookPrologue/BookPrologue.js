@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import FullText from '../../Components/FullText/FullText'
 import BookInfo from '../../Components/BookInfo/BookInfo'
-import Toolbar from '../../Components/Toolbar/Toolbar'
-import Sidedrawer from '../../Components/SideDrawer/Sidedrawer'
 import Buttons from '../../Components/UI/Buttons/Buttons'
 
 import classes from './BookPrologue.module.css'
@@ -10,7 +8,8 @@ import classes from './BookPrologue.module.css'
 class BookPrologue extends Component {
     state = {
         ...this.props.turnData(),
-        answered: null};
+        answered: null,
+        openMenu: false};
 
     answerHandler = (title) => {
         if (this.state.bookInfo.bookTitle === title) this.setState({answered: true});
@@ -25,10 +24,10 @@ class BookPrologue extends Component {
        })
     };
 
+
+
     render() {
         return (<div className={classes.BookPrologue}>
-
-            <Toolbar/>
             <div className={[classes.BookPrologue, classes.FullText].join(' ')}>
                 <FullText text={this.state.bookInfo.text}/>
                 <BookInfo bookTitle={this.state.bookInfo.bookTitle}

@@ -1,17 +1,28 @@
 .Sidedrawer {
-    width: 75%;
+    width: 275px;
     height: 100%;
     background-color: white;
     z-index: 200;
     position: fixed;
-    transition: transform 0.3s;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    padding: 15px;
 }
 
 .Sidedrawer a {
     padding: 1em;
+    margin: 5px;
 }
 
-.Side
+.Open {
+    transform: translateX(0px);
+}
+
+.Closed {
+    transform: translateX(-275px);
+}
 
 @media (min-width: 500px) {
     .Sidedrawer {

@@ -1,9 +1,10 @@
 .Toolbar {
     background-color: #DC3522;
     width: 100%;
-    text-align: center;
     margin: 0;
     color: white;
+    display: flex;
+    text-align: right;
 }
 
 .Toolbar h1 {

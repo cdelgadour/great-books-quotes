@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookPrologue from './Containers/BookPrologue/BookPrologue'
+import Layout from './hoc/Layout/Layout'
 import './App.css';
 
 const shuffle = (arr) => {
@@ -78,9 +79,9 @@ class App extends Component {
     };
   render() {
     return (
-      <div className="App">
-          <BookPrologue  turnData={this.getTurnData}/>
-      </div>
+          <Layout>
+              <BookPrologue turnData={this.getTurnData}/>
+          </Layout>
     );
   }
 }
