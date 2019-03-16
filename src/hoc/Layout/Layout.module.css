@@ -1,3 +1,8 @@
+.Layout {
+    width: 100%;
+    display: block;
+}
+
 @media (min-width: 801px) {
     .App {
         max-width: 800px;

@@ -1,6 +1,7 @@
 .BookInfo {
     margin: 0;
     text-align: center;
+    transition: visibility 0.5s, width 0.5s;
 }
 
 .BookInfo button {
@@ -25,4 +26,14 @@
         font-size: 1.5em;
         text-align: center;
     }
+}
+
+.Incorrect {
+    visibility: hidden;
+    width: 0;
+}
+
+.Correct {
+    visibility: visible;
+    width: 100%;
 }

@@ -1,25 +1,26 @@
-.Buttons {
-    background-color: #D9CB9E;
+.AnswerArea {
     display: flex;
-    flex-wrap: wrap;
-    position: absolute;
     bottom: 0;
 }
 
+.AnswerArea div {
+    flex-wrap: wrap;
+}
+
 @media (min-width: 650px) and (max-width: 800px) {
-    .Buttons {
+    .AnswerArea {
         height: 50%;
         width: 100%;
         box-sizing: border-box;
     }
 
-    .Buttons button {
+    .AnswerArea button {
         font-size: 1.7em;
     }
 }
 
 @media (min-width: 801px) {
-    .Buttons {
+    .AnswerArea {
         position: inherit;
         display: flex;
         flex-wrap: wrap;

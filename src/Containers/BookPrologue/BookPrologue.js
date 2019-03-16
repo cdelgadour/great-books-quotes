@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FullText from '../../Components/FullText/FullText'
-import BookInfo from '../../Components/BookInfo/BookInfo'
-import Buttons from '../../Components/UI/Buttons/Buttons'
+//import BookInfo from '../../Components/BookInfo/BookInfo'
+import AnswerArea from '../../Components/UI/AnswerArea/AnswerArea'
 
 import classes from './BookPrologue.module.css'
 
@@ -30,12 +30,15 @@ class BookPrologue extends Component {
         return (<div className={classes.BookPrologue}>
             <div className={[classes.BookPrologue, classes.FullText].join(' ')}>
                 <FullText text={this.state.bookInfo.text}/>
-                <BookInfo bookTitle={this.state.bookInfo.bookTitle}
-                            authorName={this.state.bookInfo.author}
-                            correct={this.state.answered}
-                            nextTitle={this.nextTitleHandler}/>
             </div>
-            <Buttons titles={this.state.bookList} checkAnswer={this.answerHandler} display={this.state.answered}></Buttons>
+            <AnswerArea titles={this.state.bookList}
+                        checkAnswer={this.answerHandler}
+                        display={this.state.answered}
+                        bookTitle={this.state.bookInfo.bookTitle}
+                        authorName={this.state.bookInfo.author}
+                        correct={this.state.answered}
+                        nextTitle={this.nextTitleHandler}>
+            </AnswerArea>
         </div>)
     }
 }
