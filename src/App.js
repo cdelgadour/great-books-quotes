@@ -3,6 +3,9 @@ import BookPrologue from './Containers/BookPrologue/BookPrologue'
 import Layout from './hoc/Layout/Layout'
 import './App.css';
 
+//TODO: Add html height
+//TODO: Have to expand #root to height: 100%
+
 const shuffle = (arr) => {
     var currentIndex = arr.length, temporaryValue, randomIndex;
 
