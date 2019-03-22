@@ -1,0 +1,12 @@
+.form {
+    display: block;
+}
+
+.form input {
+    background-color: #DC3522;
+    width: 75%;
+}
+
+.form textarea {
+    background-color: #DC3522;
+}

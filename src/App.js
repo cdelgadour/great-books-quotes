@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 import BookPrologue from './Containers/BookPrologue/BookPrologue'
 import Layout from './hoc/Layout/Layout'
 import './App.css';
+import axios from './axios-add';
+import AddQuote from './Containers/addQuote/addQuote'
 
 //TODO: Add html height
 //TODO: Have to expand #root to height: 100%
@@ -23,57 +26,31 @@ const shuffle = (arr) => {
     return arr;
 };
 
-let books = [
-    {
-        author: 'Charles Dickens',
-        text: 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief ' +
-            ', it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair...',
-        bookTitle: 'A Tale of Two Cities'
-    },
-    {
-        author: 'Fyodor Dostoevsky',
-        text: 'I am a sick man... I am a spiteful man. I am an unpleasant man. I think my liver is diseased. However, I don\'t know beans ' +
-            'about my disease, and I am not sure what is bothering me. I don\'t treat it and never have, though I respect medicine and doctors.',
-        bookTitle: 'Notes from the Underground'
-    },
-    {
-        author:'Friedrich Nietzsche',
-        text: 'We are unknown to ourselves, we knowers: and with good reason. We have never looked for ourselves, – so how are we ever supposed ' +
-            'to find ourselves? How right is the saying: \'Where your treasure is, there will your heart be also\'; our treasure is where ' +
-            'the hives of our knowledge are.',
-        bookTitle: 'Genealogy of Morals'
-    },
-    {
-        author: 'Gabriel García Márquez',
-        text: 'Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice.',
-        bookTitle: 'One Hundred Years of Solitude'
-    },
-    {
-        author: 'Charles Dickens',
-        text: 'Whether I shall turn out to be the hero of my own life, or whether that station will be held by anybody else, these pages must show.',
-        bookTitle: 'David Copperfield'
-    },
-    {
-        author: 'Leo Tolstoy',
-        text: 'All happy families are alike; each unhappy family is unhappy in its own way.',
-        bookTitle: 'Anna Karenina'
-    },
-];
-
-
 class App extends Component {
+    state = {
+        loaded: false
+    };
+    componentDidMount() {
+        axios.get('/authors/-LaXx5hXMY-QQ9yn9rSv.json')
+            .then(response => {
+                this.setState({quotes: response.data, loaded: true});
+            })
+            .catch(e => console.log(e));
+    }
+
     getTurnData = () => {
         let booksArray = [];
         let bookInfo;
-        for (let book of books) {
+        for (let book of this.state.quotes) {
             booksArray.push(book.bookTitle);
         }
+
         booksArray = shuffle(booksArray).splice(0, 4);
         let correct = booksArray[Math.floor(Math.random() * booksArray.length)];
-        books.forEach(book => {
-                if (book.bookTitle === correct) bookInfo = {...book};
-            }
-        );
+
+        for (let book of this.state.quotes) {
+            if (book.bookTitle === correct) bookInfo = {...book};
+        }
 
         return {
             bookInfo: {...bookInfo},
@@ -81,9 +58,14 @@ class App extends Component {
         }
     };
   render() {
+      let bookPrologue = null;
+      if (this.state.loaded) {
+          bookPrologue = <Route path="/" exact render={(matchProps) => <BookPrologue turnData={this.getTurnData} {...matchProps}/>}/>;
+      }
     return (
           <Layout>
-              <BookPrologue turnData={this.getTurnData}/>
+              {bookPrologue}
+              <Route path='/test' component={AddQuote}/>
           </Layout>
     );
   }
