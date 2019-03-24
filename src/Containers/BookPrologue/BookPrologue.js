@@ -15,6 +15,12 @@ class BookPrologue extends Component {
         else this.setState({answered: false});
     };
 
+    componentDidUpdate() {
+    }
+
+    componentDidMount() {
+    }
+
     nextTitleHandler = () => {
        const turnData = {...this.props.turnData()};
        this.setState({

@@ -9,7 +9,8 @@ import AddQuote from './Containers/addQuote/addQuote'
 //TODO: Add html height
 //TODO: Have to expand #root to height: 100%
 //TODO: Agregar spinner
-//TODO: Force App re-render (and db connection) on form submission
+//TODO: Pass data from form to app and have app
+//TODO: Make app beautiful
 
 const shuffle = (arr) => {
     var currentIndex = arr.length, temporaryValue, randomIndex;
@@ -33,14 +34,23 @@ class App extends Component {
         loaded: false
     };
     componentDidMount() {
+        this.getDataFromDB();
+    }
+
+    getDataFromDB = () => {
         axios.get('/authors/-LaXx5hXMY-QQ9yn9rSv.json')
             .then(response => {
                 let data = response.data;
-                this.setState({quotes: {...data}, loaded: true});
+                this.setState({quotes: data, loaded: true});
             })
             .catch(e => console.log(e));
+    };
 
-    }
+    addQuoteHandler = (data) => {
+        axios.post('/authors/-LaXx5hXMY-QQ9yn9rSv.json', data)
+            .then(() => this.getDataFromDB())
+            .catch(e => console.log(e));
+    };
 
     getTurnData = () => {
         let booksArray = [];
@@ -70,7 +80,7 @@ class App extends Component {
     return (
           <Layout>
               {bookPrologue}
-              <Route path='/test' component={AddQuote}/>
+              <Route path='/test' render={ (matchProps) => <AddQuote updateQuotes={this.addQuoteHandler} {...matchProps}/>}/>
           </Layout>
     );
   }

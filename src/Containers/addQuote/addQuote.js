@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 import classes from './addQuote.module.css'
-import axios from '../../axios-add';
-//import axios from 'axios'
 
 class addQuote extends Component {
     state = {
         author: '',
         bookTitle: '',
         text: ''
-    };
-
-    addLine = (e) => {
-        e.preventDefault();
-        console.log(e);
-        let newLine = {
-            author: null
-        };
     };
 
     formStateUpdate = e => {
@@ -25,18 +15,8 @@ class addQuote extends Component {
     sendForm = e => {
         e.preventDefault();
         let newData = {...this.state};
-        this.setState({
-            author: '',
-            bookTitle: '',
-            text: ''
-        });
-        axios.post(`https://great-books-5f716.firebaseio.com/authors/-LaXx5hXMY-QQ9yn9rSv.json`, newData)
-            .then(resp => {
-                console.log(resp);
-                this.props.history.replace('/');
-            })
-            .catch(e => console.log(e));
-
+        this.props.updateQuotes(newData);
+        this.props.history.replace('/');
     };
 
     cancelHandler = (e) => {
