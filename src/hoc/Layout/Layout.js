@@ -14,9 +14,14 @@ class Layout extends Component {
         }))
     };
 
+    addAuthor = () => {
+        this.toggleSidedrawer();
+    };
+
   render() {
       return (<div className={classes.Layout}>
-          <SideDrawer open={this.state.openDrawer} clicked={this.toggleSidedrawer}/>
+          <SideDrawer open={this.state.openDrawer}
+                      clicked={this.toggleSidedrawer}/>
           <Toolbar clicked={this.toggleSidedrawer}/>
           {this.props.children}
       </div>)

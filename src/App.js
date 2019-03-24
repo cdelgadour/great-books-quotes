@@ -8,6 +8,8 @@ import AddQuote from './Containers/addQuote/addQuote'
 
 //TODO: Add html height
 //TODO: Have to expand #root to height: 100%
+//TODO: Agregar spinner
+//TODO: Force App re-render (and db connection) on form submission
 
 const shuffle = (arr) => {
     var currentIndex = arr.length, temporaryValue, randomIndex;
@@ -33,23 +35,26 @@ class App extends Component {
     componentDidMount() {
         axios.get('/authors/-LaXx5hXMY-QQ9yn9rSv.json')
             .then(response => {
-                this.setState({quotes: response.data, loaded: true});
+                let data = response.data;
+                this.setState({quotes: {...data}, loaded: true});
             })
             .catch(e => console.log(e));
+
     }
 
     getTurnData = () => {
         let booksArray = [];
         let bookInfo;
-        for (let book of this.state.quotes) {
-            booksArray.push(book.bookTitle);
+        let allQuotes = {...this.state.quotes};
+        for (let book in allQuotes) {
+            booksArray.push(allQuotes[book].bookTitle);
         }
 
         booksArray = shuffle(booksArray).splice(0, 4);
         let correct = booksArray[Math.floor(Math.random() * booksArray.length)];
 
-        for (let book of this.state.quotes) {
-            if (book.bookTitle === correct) bookInfo = {...book};
+        for (let book in allQuotes) {
+            if (allQuotes[book].bookTitle === correct) bookInfo = {...allQuotes[book]};
         }
 
         return {
@@ -59,7 +64,7 @@ class App extends Component {
     };
   render() {
       let bookPrologue = null;
-      if (this.state.loaded) {
+     if (this.state.loaded) {
           bookPrologue = <Route path="/" exact render={(matchProps) => <BookPrologue turnData={this.getTurnData} {...matchProps}/>}/>;
       }
     return (

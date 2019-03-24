@@ -23,10 +23,6 @@ class BookPrologue extends Component {
        })
     };
 
-    componentDidMount() {
-        console.log(this.props);
-    }
-
     render() {
         return (<div className={classes.BookPrologue}>
             <div className={[classes.BookPrologue, classes.FullText].join(' ')}>
