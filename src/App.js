@@ -5,12 +5,7 @@ import Layout from './hoc/Layout/Layout'
 import './App.css';
 import axios from './axios-add';
 import AddQuote from './Containers/addQuote/addQuote'
-
-//TODO: Add html height
-//TODO: Have to expand #root to height: 100%
-//TODO: Agregar spinner
-//TODO: Pass data from form to app and have app
-//TODO: Make app beautiful
+import Spinner from './Components/UI/Spinner/Spinner'
 
 const shuffle = (arr) => {
     var currentIndex = arr.length, temporaryValue, randomIndex;
@@ -73,7 +68,7 @@ class App extends Component {
         }
     };
   render() {
-      let bookPrologue = null;
+      let bookPrologue = <Spinner/>;
      if (this.state.loaded) {
           bookPrologue = <Route path="/" exact render={(matchProps) => <BookPrologue turnData={this.getTurnData} {...matchProps}/>}/>;
       }
