@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import BookPrologue from './Containers/BookPrologue/BookPrologue'
+import BookPrologue from './Containers/BookQuotes/BookPrologue'
 import Layout from './hoc/Layout/Layout'
 import './App.css';
 import axios from './axios-add';

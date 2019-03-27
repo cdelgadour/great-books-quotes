@@ -1,6 +1,6 @@
 .AnswerArea {
     display: flex;
-    bottom: 0;
+    padding: 0.5em;
 }
 
 .AnswerArea div {

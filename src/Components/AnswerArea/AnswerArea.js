@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button/Button'
 import classes from './AnswerArea.module.css'
-import BookInfo from '../../BookInfo/BookInfo'
+import BookInfo from '../BookInfo/BookInfo'
 
 const AnswerArea = props => {
     let buttons = (<div>

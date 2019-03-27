@@ -19,8 +19,12 @@ const SideDrawer = (props) => {
             <Backdrop show={props.open} close={props.clicked}/>
             <div className={attachedClasses.join(' ')}>
                 <h2>Menu</h2>
-                <Link to='/test' style={{color: 'red'}} onClick={linked}>Add a prologue</Link>
-                <h2 style={{bottom: 0}}>Close</h2>
+                <Link to='/test'
+                      style={{textDecoration:'none'}}
+                      onClick={linked}>Add a quote!</Link>
+                <Link to=''
+                      onClick={props.clicked}
+                      style={{display:'block', textDecoration:'none'}}>Close</Link>
             </div>
         </div>)
 };

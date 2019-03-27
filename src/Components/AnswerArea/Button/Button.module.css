@@ -1,10 +1,12 @@
 .Button {
     width: 100%;
-    border-width: 1px 5px;
     padding: 10px;
     font-size: 1em;
     font-weight: bold;
-    margin: 0.5em;
+    margin: 0.5em 0;
+    background-color: #fffdf9;
+    border-radius: 0 8px 0 8px;
+    box-shadow: 1px 1px 3px #6c6c6c;
 }
 
 button:hover {
@@ -15,6 +17,14 @@ button:hover {
 
 button:active {
     background-color: #D9CB9E;
+}
+
+@media (max-width: 600px) {
+    .Button {
+        width: 90%;
+        font-size: .8em;
+        margin-left: 5%;
+    }
 }
 
 @media (min-width: 801px) {

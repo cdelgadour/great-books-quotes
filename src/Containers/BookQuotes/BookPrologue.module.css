@@ -1,17 +1,25 @@
 .BookPrologue {
-    background-color: white;
     color: black;
     line-height: 1.6;
-}
-
-.BookPrologue div {
-    padding: 10px;
+    height: 350px;
 }
 
 .BookPrologue .FullText {
     padding: 2em;
     color: black;
     text-align: justify;
+}
+
+@media (max-width: 600px) {
+    .BookPrologue .FullText {
+        padding: 0 0.8em;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .BookPrologue {
+        height: 250px;
+    }
 }
 
 @media (min-width: 801px) {

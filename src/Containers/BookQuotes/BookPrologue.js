@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FullText from '../../Components/FullText/FullText'
 //import BookInfo from '../../Components/BookInfo/BookInfo'
-import AnswerArea from '../../Components/UI/AnswerArea/AnswerArea'
+import AnswerArea from '../../Components/AnswerArea/AnswerArea'
 import classes from './BookPrologue.module.css'
 
 class BookPrologue extends Component {

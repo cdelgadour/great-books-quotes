@@ -9,6 +9,14 @@
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     padding: 15px;
+    font-family: sans-serif;
+}
+
+.Sidedrawer button {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    display: block;
+    font-size: 1em;
 }
 
 .Sidedrawer a {

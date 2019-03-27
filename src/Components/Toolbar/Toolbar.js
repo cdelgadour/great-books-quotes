@@ -7,9 +7,9 @@ const Toolbar = props => {
     return (
         <header className={classes.Toolbar}>
             <DrawerToggle open={props.clicked}/>
-            <h1 className={classes.Title}>Great Books' Prologues</h1>
+            <h1 className={classes.Title}>Book Quotes</h1>
             <NavItems/>
-        </header>);
+        </header>)
 };
 
 export default Toolbar;

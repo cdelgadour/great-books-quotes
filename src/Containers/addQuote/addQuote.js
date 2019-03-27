@@ -24,26 +24,32 @@ class addQuote extends Component {
         e.preventDefault();
     };
     render() {
-        return (<div style={{textAlign: 'center'}}>
-            <h2>Add a famous opening quote!</h2>
+        return (<div style={{textAlign: 'center', color: '#58442d'}}>
+            <h2>Add a book quote!</h2>
             <form action="" className={classes.form}>
-                <div>Book name: <br/><input type="text"
-                                            name="bookTitle"
-                                            value={this.state.bookTitle}
-                                            onChange={this.formStateUpdate}/></div>
-                <div>Book author: <br/><input
-                    type="text"
+                <div>
+                    <input type="text"
+                           name="bookTitle"
+                           value={this.state.bookTitle}
+                           onChange={this.formStateUpdate}
+                           placeholder="Book name"/>
+                </div>
+                <div>
+                    <input type="text"
                     name="author"
                     value={this.state.author}
-                    onChange={this.formStateUpdate}/></div>
+                    onChange={this.formStateUpdate}
+                    placeholder="Book author"/></div>
                 <div>
-                    Book quote: <br/><textarea style={{width: '75%', height:'100px'}}
-                                                type="text"
-                                                name="text"
-                                                value={this.state.text}
-                                                onChange={this.formStateUpdate}/></div>
-                <button style={{width: '60px', padding:'2em', borderRadius: 'solid 2px'}} onClick={this.sendForm}>Add!</button>
-                <button onClick={this.cancelHandler}>Cancel</button>
+                    <textarea style={{width: '75%', height:'100px'}}
+                              type="text"
+                              name="text"
+                              value={this.state.text}
+                              onChange={this.formStateUpdate}
+                              placeholder="Add a quote"/>
+                </div>
+                <button onClick={this.sendForm}>Add!</button>
+                <button onClick={this.cancelHandler}>Back</button>
             </form>
         </div>)
     }
