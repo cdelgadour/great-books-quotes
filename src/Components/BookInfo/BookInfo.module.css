@@ -16,17 +16,27 @@
 }
 
 .BookInfo button:hover {
-    font-size: 1em;
-    font-weight: bolder;
     background-color: #DC3522;
     color: white;
 }
 
 @media (min-width: 650px) {
     .BookInfo h3 {
-        margin: 0;
-        font-size: 1.5em;
+        margin: 0.5em;
+        font-size: 2em;
         text-align: center;
+    }
+
+    .BookInfo button {
+        width: 30%;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 850px) {
+    .BookInfo h3 {
+        font-size: 1.5em;
+        margin: 0;
     }
 }
 

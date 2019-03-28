@@ -12,16 +12,26 @@
         box-sizing: border-box;
     }
 
-    .item {
-        background-color: salmon;
-        padding: 6px 20px;
-        margin-top: 0.5em;
-        border-radius: 5px;
-        box-sizing: border-box;
-        height: 80%;
+    .NavItems li {
+        padding: 1.3em;
+        margin-left: 4em;
+        background-color: #c79d70;
+        color: white;
     }
 
-    .item:hover {
-        background-color: salmon;
+    .NavItems a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    .NavItems li:hover {
+        background-color: #795e42;
+    }
+}
+
+@media (min-width: 850px) {
+    .NavItems li {
+        padding: 1.7em;
     }
 }

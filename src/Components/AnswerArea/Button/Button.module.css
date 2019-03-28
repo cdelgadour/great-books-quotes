@@ -1,9 +1,9 @@
 .Button {
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 8px;
     font-size: 1em;
     font-weight: bold;
-    margin: 0.5em 0;
+    margin: 0 0 0.8em 5%;
     background-color: #fffdf9;
     border-radius: 0 8px 0 8px;
     box-shadow: 1px 1px 3px #6c6c6c;
@@ -19,11 +19,10 @@ button:active {
     background-color: #D9CB9E;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 350px) and (min-height: 650px) {
     .Button {
-        width: 90%;
-        font-size: .8em;
-        margin-left: 5%;
+        font-size: 1.2em;
+        padding: 0.7em;
     }
 }
 

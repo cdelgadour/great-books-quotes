@@ -31,7 +31,7 @@ class BookPrologue extends Component {
 
     render() {
         return (<div className={classes.BookPrologue}>
-            <div className={[classes.BookPrologue, classes.FullText].join(' ')}>
+            <div className={classes.FullText}>
                 <FullText text={this.state.bookInfo.text}/>
             </div>
             <AnswerArea titles={this.state.bookList}

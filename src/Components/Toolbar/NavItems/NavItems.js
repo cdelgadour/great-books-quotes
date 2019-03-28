@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom';
 
 const navItems = () => {
     return(<ul className={classes.NavItems}>
-        <Link to='test' className={classes.item}>Add quote</Link>
+        <li>
+            <Link to='test' className={classes.item}>Add quote</Link>
+        </li>
     </ul>)
 };
 
