@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const navItems = () => {
     return(<ul className={classes.NavItems}>
         <li>
-            <Link to='test' className={classes.item}>Add quote</Link>
+            <Link to='/add-quote' className={classes.item}>Add quote</Link>
         </li>
     </ul>)
 };

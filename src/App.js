@@ -75,7 +75,7 @@ class App extends Component {
     return (
           <Layout>
               {bookPrologue}
-              <Route path='/test' render={ (matchProps) => <AddQuote updateQuotes={this.addQuoteHandler} {...matchProps}/>}/>
+              <Route path='/add-quote' render={ (matchProps) => <AddQuote updateQuotes={this.addQuoteHandler} {...matchProps}/>}/>
           </Layout>
     );
   }

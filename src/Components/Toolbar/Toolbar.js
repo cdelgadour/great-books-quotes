@@ -1,13 +1,13 @@
 import React from 'react';
-import classes from './Toolbar.module.css';
+import './Toolbar.scss';
 import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle'
 import NavItems from './NavItems/NavItems'
 
 const Toolbar = props => {
     return (
-        <header className={classes.Toolbar}>
+        <header className="Toolbar">
             <DrawerToggle open={props.clicked}/>
-            <h1 className={classes.Title}>Book Quotes</h1>
+            <h1 className="Title">Book Quotes</h1>
             <NavItems/>
         </header>)
 };

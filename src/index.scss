@@ -1,3 +1,16 @@
+@import './_variables.scss';
+
+@font-face {
+  font-family: Literata;
+  src: url('./Fonts/Literata.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Raleway;
+  font-weight: 500;
+  src: url('./Fonts/Raleway-Medium.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,9 +22,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: $app-font, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: content-box;
@@ -23,6 +34,3 @@ code {
     monospace;
 }
 
-@media (min-width: 851px) {
-
-}
