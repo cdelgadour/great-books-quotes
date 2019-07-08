@@ -1,30 +1,24 @@
 import React from 'react'
-import classes from './Sidedrawer.module.css'
+import './Sidedrawer.scss'
 import Backdrop from '../UI/Backdrop/Backdrop'
-import {Link, withRouter} from 'react-router-dom';
+import NavItem from '../Toolbar/NavItems/NavItem'
+import {withRouter} from 'react-router-dom';
 
 const SideDrawer = (props) => {
-    let attachedClasses = [classes.Sidedrawer, classes.Closed];
+    let attachedClasses = ['Sidedrawer'];
     if (props.open) {
-        attachedClasses = [classes.Sidedrawer, classes.Open];
+        attachedClasses = ['Sidedrawer', 'Open'];
     }
-
-    let linked = () => {
-        props.clicked();
-        props.history.push('/');
-    };
-
+    
     return (
         <div>
             <Backdrop show={props.open} close={props.clicked}/>
             <div className={attachedClasses.join(' ')}>
-                <h2>Menu</h2>
-                <Link to='/add-quote'
-                      style={{textDecoration:'none'}}
-                      onClick={linked}>Add a quote!</Link>
-                <Link to=''
-                      onClick={props.clicked}
-                      style={{display:'block', textDecoration:'none'}}>Close</Link>
+                <h2 className="close" onClick={props.clicked}>&times;</h2>
+                <ul className="NavItems">
+                    <NavItem path="/">Home</NavItem>
+                    <NavItem path="/add-quote">Add a quote!</NavItem>
+                </ul>
             </div>
         </div>)
 };

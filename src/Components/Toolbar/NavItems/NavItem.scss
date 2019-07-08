@@ -1,0 +1,17 @@
+@import '../../../variables';
+
+.NavItem {
+  font-family: $app-font;
+  margin: 1em;
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 1em 0.5em;
+
+    &:active {
+      background-color: $secondary-color;
+      border-radius: 5px;
+    }
+  }
+}

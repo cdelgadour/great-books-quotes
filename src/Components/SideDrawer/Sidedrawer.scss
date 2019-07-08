@@ -1,0 +1,39 @@
+@import "../../variables";
+
+.Sidedrawer {
+    width: 80vw;
+    height: 100%;
+    background-color: white;
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-out;
+    font-family: $title-font;
+    border-right: 1px solid $secondary-color;
+    transform: translateX(-100vw);
+
+    h2 {
+        padding: 0 0.4em 0.1em 0.4em;
+        margin: 0;
+        font-size: 2.52em;
+        background-color: $primary-color;
+        color: white;
+        border-right: 1px solid white;
+    }
+
+    .NavItems {
+        list-style-type: none;
+        padding-left: 1em;
+    }
+}
+
+.Open {
+    transform: translateX(0vw);
+}
+
+@media (min-width: 500px) {
+    .Sidedrawer {
+        display: none;
+    }
+}
