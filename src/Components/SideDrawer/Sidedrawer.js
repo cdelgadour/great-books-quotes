@@ -9,15 +9,15 @@ const SideDrawer = (props) => {
     if (props.open) {
         attachedClasses = ['Sidedrawer', 'Open'];
     }
-    
+
     return (
         <div>
             <Backdrop show={props.open} close={props.clicked}/>
             <div className={attachedClasses.join(' ')}>
                 <h2 className="close" onClick={props.clicked}>&times;</h2>
                 <ul className="NavItems">
-                    <NavItem path="/">Home</NavItem>
-                    <NavItem path="/add-quote">Add a quote!</NavItem>
+                    <NavItem path="/" clicked={props.clicked}>Home</NavItem>
+                    <NavItem path="/add-quote" clicked={props.clicked}>Add a quote!</NavItem>
                 </ul>
             </div>
         </div>)

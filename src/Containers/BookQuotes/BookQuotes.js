@@ -7,18 +7,20 @@ class BookQuotes extends Component {
     state = {
         ...this.props.turnData(),
         answered: null,
-        openMenu: false};
-
-    answerHandler = (title) => {
-        if (this.state.bookInfo.bookTitle === title) this.setState({answered: true});
-        else this.setState({answered: false});
+        openMenu: false,
+        wrongAnswersIDs: []
     };
 
-    componentDidUpdate() {
-    }
-
-    componentDidMount() {
-    }
+    answerHandler = title => {
+        if (this.state.bookInfo.bookTitle === title) this.setState({
+            answered: true,
+            wrongAnswersIDs: []
+        });
+        else this.setState(prevState => ({
+            answered: false,
+            wrongAnswersIDs: prevState.wrongAnswersIDs.concat(title)
+        }));
+    };
 
     nextTitleHandler = () => {
        const turnData = {...this.props.turnData()};
@@ -39,7 +41,8 @@ class BookQuotes extends Component {
                         bookTitle={this.state.bookInfo.bookTitle}
                         authorName={this.state.bookInfo.author}
                         correct={this.state.answered}
-                        nextTitle={this.nextTitleHandler}>
+                        nextTitle={this.nextTitleHandler}
+                        wrongAnswers={this.state.wrongAnswersIDs}>
             </AnswerArea>
         </div>)
     }

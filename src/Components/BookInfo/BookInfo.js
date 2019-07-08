@@ -1,10 +1,11 @@
 import React from 'react';
-import classes from './BookInfo.module.css'
+import './BookInfo.scss'
+
 
 const BookInfo = (props) => {
-    let assignedClasses = [classes.BookInfo,classes.Incorrect].join(' ') ;
+    let assignedClasses = ['BookInfo','Incorrect'].join(' ') ;
     if (props.correct) {
-        assignedClasses = [classes.BookInfo, classes.Correct].join(' ');
+        assignedClasses = ['BookInfo', 'Correct'].join(' ');
     }
 
     return (<div className={assignedClasses}>
