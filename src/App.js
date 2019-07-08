@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import BookPrologue from './Containers/BookQuotes/BookPrologue'
+import BookQuotes from './Containers/BookQuotes/BookQuotes'
 import Layout from './hoc/Layout/Layout'
 import './App.css';
 import axios from './axios-add';
@@ -70,7 +70,7 @@ class App extends Component {
   render() {
       let bookPrologue = <Spinner/>;
      if (this.state.loaded) {
-          bookPrologue = <Route path="/" exact render={(matchProps) => <BookPrologue turnData={this.getTurnData} {...matchProps}/>}/>;
+          bookPrologue = <Route path="/" exact render={(matchProps) => <BookQuotes turnData={this.getTurnData} {...matchProps}/>}/>;
       }
     return (
           <Layout>

@@ -1,0 +1,33 @@
+@import '../../../_variables.scss';
+
+button {
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 6px;
+    box-shadow: 0px 4px 9px -1px #5d5b5dba;
+    background-color: #fffdf9;
+    font-family: $app-font;
+
+    &:hover,
+    &:active {
+        font-size: 2em;
+    }
+
+}
+
+@media (min-width: 350px) and (min-height: 650px) {
+    .Button {
+        font-size: 1.2em;
+        padding: 0.7em;
+    }
+}
+
+@media (min-width: 801px) {
+    .Button {
+        box-sizing: border-box;
+        width: 40%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}

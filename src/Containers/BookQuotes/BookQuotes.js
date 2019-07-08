@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import FullText from '../../Components/FullText/FullText'
 //import BookInfo from '../../Components/BookInfo/BookInfo'
 import AnswerArea from '../../Components/AnswerArea/AnswerArea'
-import classes from './BookPrologue.module.css'
+import './BookQuotes.scss'
 
-class BookPrologue extends Component {
+class BookQuotes extends Component {
     state = {
         ...this.props.turnData(),
         answered: null,
@@ -30,9 +29,9 @@ class BookPrologue extends Component {
     };
 
     render() {
-        return (<div className={classes.BookPrologue}>
-            <div className={classes.FullText}>
-                <FullText text={this.state.bookInfo.text}/>
+        return (<div className="BookQuotes">
+            <div className="Quote-Body">
+                {this.state.bookInfo.text}
             </div>
             <AnswerArea titles={this.state.bookList}
                         checkAnswer={this.answerHandler}
@@ -46,4 +45,4 @@ class BookPrologue extends Component {
     }
 }
 
-export default BookPrologue;
+export default BookQuotes;

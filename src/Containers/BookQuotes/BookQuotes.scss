@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.BookQuotes {
+    background-color: $primary-color;
+    color: black;
+    line-height: 1.5;
+    font-size: 0.9em;
+    height: 91vh;
+
+    .Quote-Body {
+        padding: 1em;
+        font-size: 1.4em;
+        color: white;
+        text-align: justify;
+        height: 55vh;
+        overflow-y: scroll;
+    }
+}
+
+@media (min-width: 801px) {
+    .BookQuotes {
+        box-sizing: border-box;
+        width: 100%;
+        margin: auto;
+        border: 0.2px solid;
+    }
+}
+
+
+

@@ -1,10 +1,12 @@
 .AnswerArea {
     display: flex;
     padding: 0.5em;
-}
+    flex-flow: row wrap;
+    justify-content: center;
 
-.AnswerArea div {
-    flex-wrap: wrap;
+    button {
+        flex: 0 0 80%;
+    }
 }
 
 @media (min-width: 650px) and (max-width: 800px) {

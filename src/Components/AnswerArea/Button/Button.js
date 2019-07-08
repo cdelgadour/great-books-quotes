@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Button.module.css'
+import './Button.scss'
 
-const AnswerButton = props => {
-    return (<button className={classes.Button} onClick={() => props.clicked(props.bookTitle)}>{props.bookTitle}</button>)
+const Button = props => {
+    return (<button onClick={() => props.clicked(props.bookTitle)}>{props.bookTitle}</button>)
 };
 
-export default AnswerButton;
+export default Button;
