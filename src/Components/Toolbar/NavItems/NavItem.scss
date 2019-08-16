@@ -15,3 +15,22 @@
     }
   }
 }
+
+@media (min-width: 501px) {
+  .NavItem {
+    color: white;
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0.7em;
+    font-size: 1.2em;
+
+    a {
+      color: white;
+
+      &:active {
+        background-color: #FEAA7C;
+        border-radius: 5px;
+      }
+    }
+  }
+}

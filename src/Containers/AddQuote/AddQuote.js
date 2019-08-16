@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import classes from './addQuote.module.css'
+import BasicForm from '../../Components/Form/Form'
+import './AddQuote.scss'
 
 class addQuote extends Component {
     state = {
@@ -25,8 +26,9 @@ class addQuote extends Component {
     };
     render() {
         return (<div style={{textAlign: 'center', color: '#58442d'}}>
+            <BasicForm/>
             <h2>Add a book quote!</h2>
-            <form action="" className={classes.form}>
+            <form action="" className="form">
                 <div>
                     <input type="text"
                            name="bookTitle"

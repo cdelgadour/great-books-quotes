@@ -17,6 +17,15 @@
     }
 }
 
+@media (min-width: 700px) {
+    .BookQuotes {
+        .Quote-Body {
+            font-size: 1.8em;
+            padding: 1.4em;
+        }
+    }
+}
+
 @media (min-width: 801px) {
     .BookQuotes {
         box-sizing: border-box;

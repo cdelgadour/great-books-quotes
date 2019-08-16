@@ -4,7 +4,7 @@ import BookQuotes from './Containers/BookQuotes/BookQuotes'
 import Layout from './hoc/Layout/Layout'
 import './App.css';
 import axios from './axios-add';
-import AddQuote from './Containers/addQuote/addQuote'
+import AddQuote from './Containers/AddQuote/AddQuote'
 import Spinner from './Components/UI/Spinner/Spinner'
 
 const shuffle = (arr) => {
