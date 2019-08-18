@@ -1,11 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+
+[Application Demo] (https://cdelgadour.github.io/great-books-quotes/)
+
 ## Great Books' Prologues
 
-A game for literature lovers where you will be presented an opening line from a
+A game for literature lovers where you will be presented a quote from a
 classic book and you will have to choose the correct title. 
-
-Future versions will include Routing and DB connection with Firebase.
 
 To run the the app, follow the instructions below.
 
