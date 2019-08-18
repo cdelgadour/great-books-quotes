@@ -28,6 +28,8 @@ class App extends Component {
     state = {
         loaded: false
     };
+
+
     componentDidMount() {
         this.getDataFromDB();
     }
@@ -75,7 +77,7 @@ class App extends Component {
     return (
           <Layout>
               {bookPrologue}
-              <Route path='/add-quote' render={ (matchProps) => <AddQuote updateQuotes={this.addQuoteHandler} {...matchProps}/>}/>
+              <Route path='/add-quote' render={ (matchProps) => <AddQuote updateQuotes={this.addQuoteHandler} fetchData={this.getDataFromDB} {...matchProps}/>}/>
           </Layout>
     );
   }

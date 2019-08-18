@@ -33,6 +33,11 @@ const addQuoteForm = ({values,
 };
 
 const addQuote = withFormik({
+    mapPropsToValues: () => ({
+        bookTitle: "",
+        bookAuthor: "",
+        bookQuote: ""
+    }),
     validationSchema: Yup.object().shape({
         bookTitle: Yup.string().required("This is a required field"),
         bookAuthor: Yup.string().required("This is a required field"),
@@ -41,10 +46,11 @@ const addQuote = withFormik({
 
     handleSubmit(values, {props, resetForm, setErrors, setStatus, setSubmitting}) {
         const quoteData = {author: values.bookAuthor, bookTitle: values.bookTitle, text: values.bookQuote};
-        axios.post('/authors/-LaXx5hXMY-QQ9yn9rSv.jon', quoteData)
+        axios.post('/authors/-LaXx5hXMY-QQ9yn9rSv.json', quoteData)
             .then(() => {
                 setStatus({formStatus: "Quote added!"});
                 setTimeout(() => resetForm(), 2000);
+                props.fetchData();
             })
             .catch(e => {
                 console.log(e);
