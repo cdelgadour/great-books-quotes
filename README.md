@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-[Application Demo] (https://cdelgadour.github.io/great-books-quotes/)
+[Application Demo](https://cdelgadour.github.io/great-books-quotes/)
 
 ## Great Books' Prologues
 
