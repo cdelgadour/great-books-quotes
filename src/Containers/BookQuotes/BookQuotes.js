@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-//import BookInfo from '../../Components/BookInfo/BookInfo'
 import AnswerArea from '../../Components/AnswerArea/AnswerArea'
 import './BookQuotes.scss'
+
 
 class BookQuotes extends Component {
     state = {
@@ -32,9 +32,10 @@ class BookQuotes extends Component {
 
     render() {
         return (<div className="BookQuotes">
-            <div className="Quote-Body">
-                {this.state.bookInfo.text}
-            </div>
+            <div className="Quote-Body fade-in">
+                    {this.state.bookInfo.text}
+                    </div>
+
             <AnswerArea titles={this.state.bookList}
                         checkAnswer={this.answerHandler}
                         display={this.state.answered}

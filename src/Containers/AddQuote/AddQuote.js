@@ -44,7 +44,7 @@ const addQuote = withFormik({
         bookQuote: Yup.string().required("This is a required field")
     }),
 
-    handleSubmit(values, {props, resetForm, setErrors, setStatus, setSubmitting}) {
+    handleSubmit(values, {props, resetForm, setErrors, setStatus}) {
         const quoteData = {author: values.bookAuthor, bookTitle: values.bookTitle, text: values.bookQuote};
         axios.post('/authors/-LaXx5hXMY-QQ9yn9rSv.json', quoteData)
             .then(() => {
