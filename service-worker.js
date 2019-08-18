@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/book-quotes/precache-manifest.eba0465e14e2cb80aad10edc42171cf4.js"
+  "/great-books-quotes/precache-manifest.bde1e30f02af4d0f9bd4ad245a13aead.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/book-quotes/index.html", {
+workbox.routing.registerNavigationRoute("/great-books-quotes/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
