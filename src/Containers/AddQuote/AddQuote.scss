@@ -1,3 +1,74 @@
+@import "../../variables";
+
+Form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .inputContainer {
+        flex: 0 1 80%;
+        margin: 0.5em auto;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+
+        input {
+            padding: 0.5em;
+            flex: 0 1 51%;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: rgba(254, 135, 103, 0.33);
+        }
+
+        textarea {
+            flex: 0 1 80%;
+            height: 20vh;
+            font-size: 1em;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 0.5em;
+            background-color: rgba(254, 135, 103, 0.33)
+        }
+
+        .formError {
+            color: red;
+            flex: 0 1 51%;
+            margin: 0.2em auto;
+        }
+    }
+
+    button {
+        display: block;
+        flex: 0 1 40%;
+        margin: 0 auto;
+    }
+
+    .status {
+        flex: 0 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+
+        & > h2 {
+            flex: 0 1 100%;
+        }
+
+    }
+}
+
+@media (min-width: 700px) {
+    Form {
+        .inputContainer {
+            .formError {
+                flex: 0 1 50%;
+                margin: 0.5em auto;
+            }
+        }
+    }
+}
+
+/*
 .form {
     display: block;
 }
@@ -36,3 +107,4 @@
     color: #fffdf9;
     background-color: #58432d;
 }
+*/
