@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/great-books-quotes/precache-manifest.bde1e30f02af4d0f9bd4ad245a13aead.js"
+  "/great-books-quotes/precache-manifest.66e402fa5770fa4216c510b1d5c186e9.js"
 );
 
 workbox.clientsClaim();

@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/great-books-quotes/static/js/runtime~main.ca894f93.js"
   },
   {
-    "revision": "86f4c298d3f57772053b",
-    "url": "/great-books-quotes/static/js/main.86f4c298.chunk.js"
+    "revision": "e8a33137f74a03f6957f",
+    "url": "/great-books-quotes/static/js/main.e8a33137.chunk.js"
   },
   {
-    "revision": "e2128f14374dfa848e0c",
-    "url": "/great-books-quotes/static/js/2.e2128f14.chunk.js"
+    "revision": "b52c4edf7710f0ec02cc",
+    "url": "/great-books-quotes/static/js/2.b52c4edf.chunk.js"
   },
   {
-    "revision": "86f4c298d3f57772053b",
+    "revision": "e8a33137f74a03f6957f",
     "url": "/great-books-quotes/static/css/main.a9a6f98a.chunk.css"
   },
   {
-    "revision": "195af0ee0dfa75398d91b2544ba9b261",
+    "revision": "7babb326485b63ccd9666c4b74895425",
     "url": "/great-books-quotes/index.html"
   }
 ];
